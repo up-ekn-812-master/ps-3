@@ -1,0 +1,63 @@
+---
+title: 'EKN-812: Problem Set 3'
+author:
+date: 
+output: pdf_document
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+geometry: margin=1in
+---
+
+_There are 85 points available on this problem set. It will be graded out of 50 i.e. there are 35 bonus points available._
+
+**Due Date: Thursday, May 2nd, at 3.00 PM.** 
+
+1. This problem considers some of the normative aspects of rent control policies. Suppose there is a unit mass of housing, and the opportunity cost of renting out these units varies. In particular, each unit has a cost $c$ to rent out, but $c \sim U(\underline{c}, \overline{c})$ for some $0 < \underline{c} < \overline{c}$. You can think of these differences as arising from either the price each flat could sell for, or by the owners' subjective valuation of the unit.
+
+On the demand side, there is a population of potential tenants. Their value of renting a unit is given by $v \sim U(\underline{v}, \overline{v})$. The differences across potential tenants in their valuation can arise from, e.g., differing opportunities for alternative accommodation (say with family or friends), different tastes for privacy, etc.
+
+(a) Given an offered price $p$, when will an owner with costs $c$ rent out her flat? Use your answer to write down the market supply $S(p)$ of rental housing. For compactness, let $\Delta c = \overline{c} - \underline{c}$.
+
+(b) Given an offered price $p$, when will a potential tenant with valuation $v$ rent a unit? Use your answer to write down the demand $D(p)$ for rental housing. Similarly, let $\Delta v = \overline{v} - \underline{v}$.
+
+(c) Find the equilibrium price and quantity of rentals, say $p^*$ and $q^*$. Also find the consumer and producer surplus.
+
+(d) Now suppose the local government imposes a price ceiling of $\overline{p} < p^*$ on rents. Thus, only $S(\overline{p})$ units will be available to rent. If these are allocated efficiently, what is consumer surplus?
+
+**Hint:** What would be the equivalent tax, say $\tau$, that would result in only $S(\overline{p})$ being traded?
+
+(e) What is the remaining producer surplus when the price ceiling is imposed? How large is the deadweight loss caused by the price ceiling?
+
+(f) Now suppose that instead of efficiently allocating the available $S(\overline{p})$ units, the local housing authority allocates them randomly amongst anyone willing to pay at least the regulated price $\overline{p}$. What is consumer surplus now? 
+
+**Hint:** What is the average valuation of those who are allocated housing units?
+
+(g) Are producers better or worse off under the random allocation policy (as compared to the efficient allocation with the price ceiling)? 
+
+(h) How large are the social losses under random allocation compared to the allocation under the equivalent tax you characterized in part (d) above?
+
+\hfill [$8 \times 5 = 40$ points]
+
+2. Consider a population of persons who are sick, but the nature of their illness is unclear. Illnesses can be either "complex", and require treatment by a specialist; or, they can be "simple", and can then be treated by a generalist. Patients must first approach a generalist, who performs tests which reveal the nature of the illness, and treats them if the illness is "simple".
+
+Patients value a composite commodity $c$ and their health; in particular, their utility function is $u(c, s) = c - vs$ where $v > 0$ is a given constant representing the discomfort they feel from being sick. Here $s = 0$ if a patient is healthy, and $s = 1$ if they are sick (regardless of whether the illness is "complex" or "simple").  Assume $v$ is the same for every person, although they may have different income levels $y$. 
+
+(a) Suppose a patient has paid $p_G$ to visit a generalist, and the tests reveal that their illness requires treatment by a specialist. How much would the patient be willing to pay to be cured? 
+
+(b) Assume a fraction $r$ of patients require treatment by specialists. Using the notation $p_S$ for the specialist's price, under what conditions (on $p_S$ and $p_G$) will patients go to the generalist in the first place? 
+
+(c) Now, imagine that when a generalist finds that a patient needs further treatment, they recommend a particular specialist, and patients cannot go to any other one. What price $p_S$ will the specialist charge?
+
+(d) Sometimes, specialists pay a "kickback" $K$ to generalists for each patient that gets referred to them. If specialists can earn a wage $w_S$ (e.g. by working in a hospital), and entry into specialist practice is unrestricted, what will the equilibrium kickback $K^*$ be? 
+
+(e) Under what conditions will we have $K^* > 0$? What interpretation can you give to this restriction (think of the social planner's problem)?
+
+(f) If generalists can earn a wage $w_G$ outside of individual practice, and entry is unrestricted, what will be the equilibrium price of generalists' services? Could the equilibrium fee charged by generalists, $p^*_G$, ever be _negative_? When will this be the case?
+
+(g) Will patients be willing to go to the generalists, or will they stay home (and tolerate their illness)? What implications does the condition you derived have for social efficiency in this industry (consider the _ex ante_ social cost of treating a sick person)?
+
+(h) Now, assume the government bans kickbacks. What will the equilibrium fees charged by specialists and generalists be? If $(1-r)v < w_G$, what will happen to the demand for care?
+
+(i) Under the conditions of part (h), if kickbacks were indeed banned, what might happen to the organization of medical practice?
+
+\hfill [$9 \times 5 = 45$ points]
