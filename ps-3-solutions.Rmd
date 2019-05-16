@@ -1,0 +1,126 @@
+---
+title: "PS-3 Memo"
+author: ""
+date: "May 2, 2019"
+output: pdf_document
+---
+
+# Question 1
+
+(a) The seller accepts only if $p>c$. So for a given price, the supply is all those houses with an opportunity cost below $p$. If $p\leq \underline{c}$ then there is no supply, and if $p\geq \overline{c}$, the supply is the whole unit of housing available. Since $c$ is uniformly distributed on $(\underline{c}, \bar{c})$, the probability of this occurring $Pr(p > c)$, and the supply is the cumulative distribution function of c.  Hence we have: 
+$$S(p)=\begin{cases}
+0 \ \text{if}  \ p\leq c\\ \\
+1 \ \text{if}  \ p\geq c\\ \\
+\frac{p-\underline{c}}{\Delta c} \ \text{if} \ p \in(\underline{c},\bar{c})
+\end{cases}$$
+
+
+(b) Similarly, the buyer would accept if $v>p$, then reasoning as before, we have: 
+
+$$D(p)=\begin{cases}
+0 \ \text{if}  \ p\geq v\\ \\
+1 \ \text{if}  \ p\leq v\\ \\
+\frac{\underline{v}-p}{\Delta v} \ \text{if} \ p \in(\underline{v},\bar{v})
+\end{cases}$$
+(c) It is possible that the equilibrium quantity is 0 or 1 (e.g. if $\underline{c}>\bar{v}$), but in the case where there is an "interior" equilibrium quantity, we have : 
+$$S(p)=D(p)\implies p^*=\frac{\Delta c}{\Delta c+\Delta v}\bar{v}+\frac{\Delta v}{\Delta c+\Delta v}\underline{c}$$
+and $$q^*=\frac{\bar{v}-\underline{c}}{\Delta v+ \Delta c}$$
+
+(d) To have $S(\bar{p})$ units rented, an equivalent tax $\tau$ would solve $D(\bar{p}+\tau)=S(\bar{p})$, i.e.  $$\frac{\underline{v}-(\bar{p}+\tau)}{\Delta v}=\frac{\bar{p}-\underline{c}}{\Delta c} \implies \tau(\bar{p})=(\bar{v}-\bar{p})-\Delta v.S(\bar{p})$$
+
+\begin{figure}[!htb]
+        \center{\includegraphics[width=\textwidth]
+        {812-diagram-1.png}}
+      \end{figure}
+      
+\clearpage
+
+Notice how $\bar{p}=p^* \implies \tau(\bar{p}=0)$. In the diagram above, it is a coincidence that $\bar{p}+\tau=\bar{c}$; this is not a general feature of the model. 
+
+The consumer surplus under efficient allocation is the trapezoid under demand and above $\bar{p}$, (highlighed in the figure), which has an area of: $$CS=\frac{1}{2}[(\bar{v}-\bar{p})+\tau(p)].S(\bar{p})$$
+
+(e) The producer surplus is just: $$PS=\frac{1}{2}(\bar{p}-\underline{c}).S(\bar{p})=\frac{1}{2}\frac{(\bar{p}-\underline{c})^2}{\Delta c}$$
+The deadweight loss is $DWL=\frac{1}{2}[q^*-S(\bar{q})].\tau(\bar{p})$
+
+(g) Producers would not care about the allocation across consumers; they get $\bar{p}$ on each rental, regardless of who pays it. 
+
+
+# Question 2
+
+Consider the following decision tree, which follows from the description of the problem:
+
+\begin{figure}[!htb]
+        \center{\includegraphics[width=\textwidth]
+        {812-diagram-2.png}}
+      \end{figure}
+      
+\clearpage
+
+(a) Once you are at the specialist's door, your choices are: 
+- go home and get $u=y-p_g-v$, or
+- pay $p_s$ and get $u=y-p_g-p_s$. 
+
+Obviously, you chose to go to the specialist if $v\geq p_s$. 
+
+(b) At the generalist stage, you are comparing an expected utility of : 
+\begin{align*}\mathbb{E}(u|\text{go to generalist}) & = (1-r)[y - p_g]+r[y-p_g+\max\{-v,-p_s \}]\\
+                                       &=y - p_g + r.\max\{-v,-p_s\}\end{align*}
+
+If you do not go to the generalist, your utility is just $u=y-v$.So you choose to go the the generalist if: 
+\begin{align*}
+y-p_g+r.\max \{-v,-p_s\} &\geq y-v\\
+\iff v + r.\max \{-v,-p_s\} &\geq p_g\\
+\iff (1-r)v+r.[v + \max\{-v,-p_s\}] & \geq p_g\\
+\iff (1-r)v+r.[\max\{0,v-p_s\}] & \geq p_g
+\end{align*}
+
+The LHS is the expected benefit of going to the generalist, while the RHS is the cost. 
+
+(c) In this situation the specialist has monopoly power, so he will extract the full willingness to pay of the patient, i.e. $p_s^*=v$. 
+
+(d) The payoff of the specialist is $\pi_s=p_s-K$. This must be $\geq w_s$ for specialists to be willing to practice. Free entry drives $\pi_s\rightarrow w_s$, so $p_s^*-K^*=w_s \implies K^*=p_s^*-w_s=v-w_s$. 
+
+(e) Since we just found $K^*=v-w_s$, then $K^*>0\iff v>w_s$. This means that the (ex-post) social benefit of treatment is greater than the (again ex-post) social cost.
+
+(f) Generalist's payoff are $\pi_g=p_g+r.K$, since they get $K$ on a fraction $r$ of their patients. (think of these as per-hour expected payoffs- everything is CRS is this problem). Then we must have: $\pi_g\geq w_g$ for generalists to practice. Under the free entry assumption, we get: 
+\begin{align*}
+p_g^* + r.K^* & = w_g\\
+\implies p_g^* & = w_g-rK^* \\
+& = w_g - r(v-w_s)
+\end{align*}
+
+Yes it is possible for $p_g^*<0$; it depends on $w_g, r, v, w_s$. 
+
+(g) Now we use the fact that $p_s^*=v$ (because of the monopoly power); then, patients will be willing to go if : 
+\begin{align*}
+(1-r)v + r.\max\{ 0,v-p_s^*\}&\geq p_g^*\\
+\iff (1-r)v + r.0 &\geq w_g-r(v-w_s)\\
+\iff v&\geq w_g + r.w_s
+\end{align*}
+
+The LHS is the social benefit of treatment, while the RHS is the (ex-ante) social cost. So the industry equilibrium is socially efficient: treatment occurs if and only if the social benefits outweigh the social costs. Interestingly, this happens despite the monopoly power of the specialists. 
+
+
+(h) Here, it is helpful to draw a diagram. We are looking for two equilibrium objects: $K^*$ and $p_g^*$ (since we have $p^*_S = v$ due to the monopoly power of the specialists). There are three constraints: 
+
+\begin{align}
+p_g^*+r.k^*&\geq w_g \rightarrow \text{participation constraint for G}\\
+v-k^*&\geq w_s \rightarrow \text{participation constraint for S}\\
+p_g^* &\leq (1-r)v \rightarrow \text{patient's willingness to pay}
+\end{align}
+
+
+\begin{figure}[!htb]
+        \center{\includegraphics[width=\textwidth]
+        {812-diagram-3.png}}
+      \end{figure}
+      
+\clearpage
+
+In the diagram, the equilibrium with kickbacks is depicted. 
+
+Now if we ban kickbacks (and force $K^*=0$), there can be no equilibrium: we'd have $p_g=w_g$ and $p_s=v$, but then patients would not be willing to pay G in the first place. 
+
+What is going on? The kickbacks allow for the monopoly distortion to be undone, because specialists have to compete to buy the right to treat patients. Although ex-post, the patients are charged their full WTP($v$), the alternative income for generalists drive down prices of overall medical care. When kickbacks are banned, this mechanism of dissipating specialist's rent can no longer function. 
+
+(i) We might expect to see generalists and specialists merging into a single practice under these conditions. You could have a single firm employ both G and S at salaries of $w_g$ and $w_s$ respectively, and charging consumers $w_g$ upon entry, plus an additional fee of $w_s$ if their illness turned out to be complex. 
